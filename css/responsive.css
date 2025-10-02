@@ -1,0 +1,287 @@
+/* XL */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .properties-to-let .prev {
+        left: 20px;
+    }
+
+    .properties-to-let .next {
+        right: 20px;
+    }
+}
+
+/* LG */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .what-we-do .landlords h3::after {
+        width: 270px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .main-header .border-b::after {
+        background-color: transparent;
+    }
+
+    .home-property-management .container::after {
+        background-color: transparent;
+    }
+
+    .main-header .solid-bar {
+        padding-left: 20px;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main-header .main-nav::after {
+        width: 40%;
+    }
+
+    .main-header.fixed-header .nav-logo {
+        width: 55%;
+    }
+
+    .main-footer .footer-logo {
+        width: 30%;
+    }
+
+    .member-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .what-we-do .landlords h3::after {
+        width: 0;
+        background-color: transparent;
+    }
+
+    .what-we-do .initial-visit .section-number,
+    .what-we-do .property-offer .section-number,
+    .what-we-do .management-services .section-number {
+        left: 0;
+    }
+}
+
+/* SM */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    :root {
+        --h1: 30px;
+        --h2: 27px;
+        --h3: 25px;
+        --h4: 22px;
+        --h5: 19px;
+        --h6: 17px;
+        --lg: 17px;
+        --bs: 16px;
+        --sm: 13px;
+    }
+
+    .main-header .main-nav::after {
+        width: 40%;
+    }
+
+    .main-header.fixed-header .nav-logo {
+        width: 55%;
+    }
+
+    .main-footer .footer-logo {
+        width: 30%;
+    }
+
+    .properties-to-let .prev {
+        left: 16px;
+    }
+
+    .properties-to-let .next {
+        right: 16px;
+    }
+
+    .member-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-countdown .border-x {
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+    }
+
+    .properties-to-let .ptl-slide-item {
+        color: var(--gray_color);
+        margin: 0 12px;
+    }
+
+    .main-header .solid-bar img {
+        width: 50%;
+    }
+
+    .what-we-do .property-offer hr {
+        margin: 20px 0;
+    }
+
+    .comparison-result .col-lg-3.col-md-4 {
+        margin: 12px 0;
+    }
+
+    .comparison-result .col-lg-3.col-md-3 {
+        margin-top: 12px;
+    }
+
+    .agent-contact .left,
+    .book-valuation .left,
+    .contact .left {
+        width: 100%;
+    }
+
+    .packages table thead th:first-child {
+        --lg: var(--h3);
+    }
+
+    .packages table thead tr {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .packages table thead th:first-child {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .packages table thead th:nth-child(2), 
+    .packages table thead th:nth-child(3), 
+    .packages table thead th:nth-child(4) {
+        display: block;
+        width: 33%;
+        border-left: none;
+	    border-right: none;
+    }
+
+    .packages table thead th:nth-child(2) .table-cell, 
+    .packages table thead th:nth-child(3) .table-cell, 
+    .packages table thead th:nth-child(4) .table-cell {
+        width: 100%;
+    }
+
+    .packages table tbody tr {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .packages table tbody td {
+        height: auto;
+        width: 100%;
+    }
+
+    .packages table tbody td:nth-child(2), 
+    .packages table tbody td:nth-child(3), 
+    .packages table tbody td:nth-child(4) {
+        display: block;
+        width: 33%;
+        border-left: none;
+	    border-right: none;
+    }
+
+    .packages table tbody td:first-child .table-cell {
+        padding: 8px 8px 4px 8px;
+        text-align: center;
+    }
+
+    .packages table tbody td:nth-child(2) .table-cell, 
+    .packages table tbody td:nth-child(3) .table-cell, 
+    .packages table tbody td:nth-child(4) .table-cell {
+        width: 100%;
+    }
+
+    .packages table tfoot tr {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .packages table tfoot td {
+        height: auto;
+        width: 100%;
+    }
+
+    .packages table tfoot td:nth-child(2), 
+    .packages table tfoot td:nth-child(3), 
+    .packages table tfoot td:nth-child(4) {
+        display: block;
+        width: 33%;
+        padding: 8px;
+        border-left: none;
+	    border-right: none;
+    }
+
+    .packages table tfoot td:nth-child(2) a, 
+    .packages table tfoot td:nth-child(3) a, 
+    .packages table tfoot td:nth-child(4) a {
+        width: 100%;
+        padding: 8px 0px;
+    }
+}
+
+/* COL */
+@media (max-width: 575.98px) {
+    :root {
+        --h1: 28px;
+        --h2: 25px;
+        --h3: 23px;
+        --h4: 20px;
+        --h5: 18px;
+        --h6: 16px;
+        --lg: 16px;
+        --bs: 15px;
+        --sm: 13px;
+    }
+
+    .main-header .main-nav::after {
+        width: 30%;
+    }
+
+    .main-header.fixed-header .nav-logo {
+        width: 55%;
+    }
+
+    .main-footer .footer-logo {
+        width: 30%;
+    }
+
+    .main-header .contact-action {
+        padding: 22px 12px;
+        font-size: var(--sm);
+    }
+
+    .main-header.fixed-header .contact-action {
+        padding: 12px 8px;
+    }
+
+    .main-header .solid-bar {
+        padding-left: 6px;
+    }
+
+    .properties-to-let .next,
+    .properties-to-let .prev {
+        display: none;
+    }
+
+    .member-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .what-we-do .section-number {
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+        left: 4px !important;
+    }
+}

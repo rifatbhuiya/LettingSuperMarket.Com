@@ -1,0 +1,1618 @@
+@charset "UTF-8";
+
+/**
+    Author: Rifat Bhiuya
+    Author email: hello.rifatbhuiya@gmail.com
+    Version: 0.0.0.1
+*/
+
+/**
+----------------
+Table Of Content
+----------------
+0. Common css start
+1. Header css start
+2. Home hero css start
+3. Full management percentage css start
+4. Home property management css start
+5. Home countdown css start
+6. Home savings cal css start
+7. Properties to let css start
+8. Reviews css start
+9. BTT css start
+10. Footer css start
+11. Contact css start
+12. Agent Switch css start
+13. Landlord css start
+14. News css start
+15. Price comparison css start
+16. What we do css start
+17. Full management css start
+18. About css start
+*/
+
+:root { 
+    /* Colors */
+    --primary_color: #00aeb4;
+    --secondary_color: #0168af;
+    --tertiary_color: #5d83bf;
+    --gray_color: #808285;
+    --light_gray: #d1d3d4;
+    --white_color: #ffffff;
+    --black_color: #000000;
+    --text_color: #231f20;
+
+    /* Round */
+    --round_sm: 5px;
+    --round_md: 10px;
+    --round_lg: 25px;
+    --round_full: 50%;
+
+    /* Typography - {Typescale, 16px based - 1.125 major thread} */
+    --h1: 32px;
+    --h2: 29px;
+    --h3: 26px;
+    --h4: 23px;
+    --h5: 20px;
+    --h6: 18px;
+    --lg: 18px;
+    --bs: 16px;
+    --sm: 13px;
+
+    /* Duration */
+    --transition: all ease-in-out .5s;
+
+    /* Font Family */
+    --sans_serif: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+span,
+address,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+a,
+button {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+body {
+    scroll-behavior: smooth;
+    font-size: var(--bs);
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--text_color);
+    font-family: var(--sans_serif);
+}
+
+.section-spacing {
+    padding: 60px 0;
+}
+
+.page-contact-us {
+    z-index: 1;
+}
+
+.page-contact-us::after{
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-contact-us h3 {
+    color: var(--white_color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.page-contact-us p {
+    color: var(--white_color);
+}
+
+.page-contact-us p a {
+    color: var(--white_color);
+    font-weight: 600;
+}
+
+.page-contact-us p a:hover {
+    text-decoration: underline;
+}
+
+.page-contact-us input {
+    display: block;
+    width: 100%;
+}
+
+.page-contact-us textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.page-contact-us input,
+.page-contact-us textarea {
+    padding: 8px;
+    border: none;
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.page-contact-us input::placeholder,
+.page-contact-us textarea::placeholder {
+    text-transform: uppercase;
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.page-contact-us button {
+    border: none;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+    padding: 8px 32px;
+    text-transform: uppercase;
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.page-contact-us button:hover {
+    opacity: .8;
+}
+/* Common css end */
+
+.main-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--white_color);
+}
+
+.main-header.fixed-header {
+    position: fixed;
+    animation: sticky-anim .5s linear 1;
+    -webkit-animation: sticky-anim .5s linear 1;
+    box-shadow: .5px .5px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+@keyframes sticky-anim {
+    0%{
+        top: -32px;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.main-header .nav-logo {
+    width: 95%;
+}
+
+.main-header.fixed-header .nav-logo {
+    width: 45%;
+}
+
+.main-header .nav-logo img {
+    width: 100%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .top-navigation a {
+    color: var(--gray_color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(--sm);
+}
+
+.main-header .top-navigation a:hover {
+    color: var(--primary_color);
+}
+
+.main-header .top-navigation a.action {
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    padding: 4px 20px;
+}
+
+.main-header .top-navigation a.action:hover {
+    color: var(--white_color);
+    opacity: .8;
+}
+
+.main-header .contact-action {
+    position: relative;
+    z-index: 1;
+    color: var(--white_color);
+    padding: 24px 32px;
+    background-color: var(--secondary_color);
+    font-weight: 600;
+}
+
+.main-header.fixed-header .contact-action {
+    padding: 16px 32px;
+}
+
+.main-header .contact-action:hover span:last-child {
+    text-decoration: underline;
+}
+
+.main-header .solid-bar {
+    background-color: transparent;
+    border: none;
+}
+
+.main-header .solid-bar img {
+    width: 60%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .solid-bar:hover img {
+    opacity: .7;
+}
+
+.main-header .main-nav {
+    position: relative;
+    z-index: 1;
+}
+
+.main-header .main-nav::after {
+    position: absolute;
+    content: '';
+    width: 20%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: var(--primary_color);
+    z-index: -1;
+}
+
+.main-header .border-b {
+    position: relative;
+    z-index: 1;
+}
+
+.main-header .border-b::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary_color);
+}
+
+.main-header .main-nav .offcanvas {
+    background-color: var(--secondary_color);
+    color: var(--white_color);
+}
+
+.main-header .main-nav .offcanvas .offcanvas-title {
+    text-transform: uppercase;
+    font-size: var(--bs);
+}
+
+.main-header .main-nav .offcanvas .close-offcanvas {
+    color: var(--white_color);
+    background-color: transparent;
+    border: none;
+}
+
+.main-header .main-nav .offcanvas .close-offcanvas:hover {
+    opacity: .8;
+}
+
+.main-header .main-nav .offcanvas .close-offcanvas i {
+    font-size: 28px;
+}
+
+.main-header .main-nav .offcanvas .offcanvas-body ul li {
+    padding-top: 20px;
+}
+
+.main-header .main-nav .offcanvas .offcanvas-body ul li:first-child {
+    padding-top: 0;
+}
+
+.main-header .main-nav .offcanvas .offcanvas-body ul a {
+    color: var(--white_color);
+    font-size: var(--lg);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-header .main-nav .offcanvas .offcanvas-body ul a:hover {
+    text-decoration: underline;
+    opacity: .9;
+}
+/* Header css end */
+
+.home-hero h1 {
+    font-weight: 600;
+    color: var(--secondary_color);
+}
+/* Home hero css end */
+
+.full-management-percentage {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.full-management-percentage h2 {
+    font-weight: 600;
+}
+
+.full-management-percentage .percentage {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.full-management-percentage .circle svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.full-management-percentage .circle circle {
+    fill: none;
+    stroke-width: 24;
+}
+
+.full-management-percentage .circle .bg {
+    stroke: var(--tertiary_color);
+}
+
+.full-management-percentage .circle .progress {
+    stroke: var(--primary_color);
+    stroke-dasharray: 754;
+    stroke-dashoffset: 754;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.full-management-percentage .circle p {
+    --lg: 28px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    font-size: var(--lg);
+    font-weight: 700;
+}
+/* Full management percentage css end */
+
+.home-property-management .container::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 65%;
+    background-color: var(--primary_color);
+    right: 8px;
+    bottom: 32px;
+}
+
+.home-property-management h3 {
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.home-property-management p {
+    margin-top: 28px;
+}
+/* Home property management css end */
+
+.home-countdown {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.home-countdown p {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.home-countdown p.title {
+    margin-top: 12px;
+    font-size: var(--lg);
+}
+
+.home-countdown .border-x {
+    border-left: 3px solid var(--secondary_color);
+    border-right: 3px solid var(--secondary_color);
+}
+/* Home countdown css end */
+
+.home-savings-cal h3 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.home-savings-cal h5 {
+    font-weight: 600;
+    color: var(--secondary_color);
+}
+
+.home-savings-cal p.gray {
+    color: var(--gray_color);
+}
+
+.home-savings-cal a.action {
+    padding: 8px 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.home-savings-cal a.action:hover {
+    opacity: .8;
+}
+/* Home savings cal css end */
+
+.properties-to-let {
+    --gray_color: #6d6e71;
+
+    background-color: var(--light_gray);
+}
+
+.properties-to-let .next,
+.properties-to-let .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 48px;
+    cursor: pointer;
+    color: var(--gray_color);
+}
+
+.properties-to-let .next {
+    right: 40px;
+}
+
+.properties-to-let .prev {
+    left: 40px;
+}
+
+.properties-to-let h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gray_color);
+}
+
+.properties-to-let .ptl-slide-item {
+    color: var(--gray_color);
+    margin: 0 16px;
+}
+
+.properties-to-let .ptl-slide-item .d-flex.justify-content-between {
+    background-color: var(--white_color);
+    padding: 16px;
+    box-shadow: .5px .5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.properties-to-let .ptl-slide-item h5 {
+    color: var(--primary_color);
+    font-weight: 700;
+}
+
+.properties-to-let .ptl-slide-item p.rate {
+    margin-top: 16px;
+}
+
+.properties-to-let .ptl-slide-item a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.properties-to-let .ptl-slide-item a:hover {
+    opacity: .8;
+}
+/* Properties to let css end */
+
+.reviews {
+    color: var(--secondary_color);
+}
+
+.reviews h5 {
+    font-weight: 700;
+}
+
+.reviews p {
+    font-weight: 600;
+}
+/* Reviews css end */
+
+.btt {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 30;
+}
+
+.btt i {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: var(--lg);
+    box-shadow: .5px .5px 3px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+}
+/* BTT css end */
+
+.main-footer {
+    padding: 48px 0;
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.main-footer .contact-details {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-footer .contact-details a {
+    color: var(--white_color);
+}
+
+.main-footer .contact-details a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .footer-logo {
+    width: 40%;
+}
+
+.main-footer ul li a {
+    font-size: var(--sm);
+    color: var(--white_color);
+}
+
+.main-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .copyright {
+    margin-top: 32px;
+    font-size: var(--sm);
+}
+
+.main-footer .copyright a {
+    color: var(--white_color);
+}
+
+.main-footer .copyright a:hover {
+    text-decoration: underline;
+}
+/* Footer css end */
+
+.contact h1 {
+    color: var(--secondary_color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact p {
+    font-weight: 600;
+    font-size: var(--lg);
+    color: var(--secondary_color);
+}
+
+.contact p a {
+    font-weight: 700;
+    color: var(--secondary_color);
+}
+
+.contact p a:hover {
+    text-decoration: underline;
+}
+
+.contact .left {
+    width: 80%;
+}
+
+.contact .right {
+    width: 20%;
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: var(--light_gray);
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    text-transform: uppercase;
+}
+
+.contact button {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--sm);
+    border: none;
+    font-weight: 600;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.contact button:hover {
+    opacity: .8;
+}
+/* Contact css end */
+
+.agent-switch-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.agent-switch-hero p {
+    font-size: var(--lg);
+    color: var(--secondary_color);
+    font-weight: 600;
+}
+
+.ready-to-talk {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.service-box h3 {
+    color: var(--primary_color);
+    font-weight: 700;
+}
+
+.service-box p.primary-text {
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.agent-contact {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.agent-contact h3 {
+    font-weight: 700;
+}
+
+.agent-contact .left {
+    width: 80%;
+}
+
+.agent-contact .right {
+    width: 20%;
+}
+
+.agent-contact input,
+.agent-contact textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: var(--white_color);
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.agent-contact input::placeholder,
+.agent-contact textarea::placeholder {
+    text-transform: uppercase;
+}
+
+.agent-contact button {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--sm);
+    border: none;
+    font-weight: 600;
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.agent-contact button:hover {
+    opacity: .8;
+}
+/* Agent Switch css end */
+
+.landlord-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.landlord-hero p.primary-text {
+    color: var(--secondary_color);
+    font-weight: 600;
+    font-size: var(--lg);
+}
+
+.landlord-service h3 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.landlord-service .service-card .head {
+    padding: 12px 0;
+    color: var(--white_color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.landlord-service .service-card:first-child .head {
+    background-color: var(--primary_color);
+}
+
+.landlord-service .service-card:last-child .head {
+    background-color: var(--secondary_color);
+}
+
+.landlord-service .service-card:first-child {
+    border-bottom: 8px solid var(--primary_color);
+}
+
+.landlord-service .service-card:last-child {
+    border-bottom: 8px solid var(--secondary_color);
+}
+
+.landlord-service .service-card .color-text {
+    font-size: var(--lg);
+}
+
+.landlord-service .service-card:first-child .color-text {
+    color: var(--primary_color);
+}
+
+.landlord-service .service-card:last-child .color-text {
+    color: var(--secondary_color);
+}
+/* Landlord css end */
+
+.news-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.news-hero p {
+    color: var(--secondary_color);
+    font-size: var(--lg);
+    font-weight: 600;
+}
+
+.news-cards .news-card p.published-at {
+    font-weight: 700;
+}
+
+.news-cards .news-card h5 {
+    font-weight: 600;
+    color: var(--gray_color);
+}
+
+.news-cards .news-card a.action {
+    padding: 8px 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.news-cards .news-card a.action:hover {
+    opacity: .8;
+}
+
+.news-cards hr {
+    margin: 48px 0;
+    border-width: 2px;
+}
+
+.news-cards .pagination a {
+    font-weight: 600;
+    color: var(--gray_color);
+}
+
+.news-cards .pagination a:hover {
+    color: var(--primary_color);
+}
+
+.news-cards .pagination a.active {
+    color: var(--primary_color);
+}
+/* News css end */
+
+.price-comparison-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.price-comparison-hero p {
+    font-size: var(--lg);
+    font-weight: 600;
+    color: var(--secondary_color);
+}
+
+.price-comparison-form {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.price-comparison-form h2 {
+    font-weight: 700;
+}
+
+.price-comparison-form form .gap {
+    gap: 80px;
+}
+
+.price-comparison-form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: var(--light_gray);
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.price-comparison-form input::placeholder {
+    text-transform: uppercase;
+}
+
+.price-comparison-form button {
+    padding: 8px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 600;
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.price-comparison-form button:hover {
+    opacity: .8;
+}
+
+.comparison-result h2 {
+    --h2: var(--h1);
+
+    font-weight: 700;
+    color: var(--secondary_color);
+}
+
+.comparison-result .top-p {
+    font-weight: 600;
+    font-size: var(--lg);
+    color: var(--secondary_color);
+}
+
+.comparison-result hr {
+    margin-top: 40px;
+    border-width: 2px;
+}
+
+.result-card {
+    padding: 40px 0;
+}
+
+.result-card:nth-child(odd) {
+    --light_gray: #e7e8e9;
+
+    background-color: var(--light_gray);
+}
+
+.result-card h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary_color);
+    margin-bottom: 8px;
+}
+
+.result-card p.bold {
+    --lg: 32px;
+
+    color: var(--primary_color);
+    font-size: var(--lg);
+    font-weight: 700;
+}
+
+.comparison-bottom h3 {
+    font-weight: 700;
+    color: var(--secondary_color);
+}
+
+.comparison-bottom p.secondary-text {
+    color: var(--secondary_color);
+    font-weight: 600;
+}
+/* Price comparison css end */
+
+.what-we-do-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.what-we-do-hero p {
+    color: var(--secondary_color);
+    font-weight: 600;
+}
+
+.what-we-do .section-number {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: var(--lg);
+    color: var(--white_color);
+    text-align: center;
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+}
+
+.what-we-do .landlords {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.what-we-do .landlords .section-number {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background-color: var(--primary_color);
+}
+
+.what-we-do .landlords h3 {
+    font-weight: 700;
+    position: relative;
+}
+
+.what-we-do .landlords h3::after {
+    position: absolute;
+    content: '';
+    top: 14px;
+    right: -60px;
+    width: 350px;
+    height: 4px;
+    background-color: var(--primary_color);
+}
+
+.what-we-do .landlords h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .landlords p {
+    font-weight: 600;
+}
+
+.what-we-do .landlords ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .landlords li::marker {
+    color: var(--primary_color);
+}
+
+.what-we-do .landlords li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .initial-visit .section-number {
+    position: absolute;
+    top: 0;
+    left: -48px;
+    background-color: var(--primary_color);
+}
+
+.what-we-do .initial-visit h3 {
+    color: var(--primary_color);
+    font-weight: 700;
+}
+
+.what-we-do .initial-visit p.primary-text {
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.what-we-do .initial-visit h4 {
+    color: var(--primary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .initial-visit ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .initial-visit li::marker {
+    color: var(--primary_color);
+}
+
+.what-we-do .initial-visit li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .property-advertising {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.what-we-do .property-advertising .section-number {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background-color: var(--secondary_color);
+}
+
+.what-we-do .property-advertising h3 {
+    font-weight: 700;
+}
+
+.what-we-do .property-advertising h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .property-advertising p {
+    font-weight: 600;
+}
+
+.what-we-do .property-advertising ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .property-advertising li::marker {
+    color: var(--white_color);
+}
+
+.what-we-do .property-advertising li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .property-offer hr {
+    margin: 80px 0;
+    border: 2px solid var(--primary_color);
+}
+
+.what-we-do .property-offer h6 {
+    color: var(--primary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .property-offer p.primary-color-bold {
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.what-we-do .property-offer .section-number {
+    position: absolute;
+    top: 0;
+    left: -48px;
+    background-color: var(--secondary_color);
+}
+
+.what-we-do .property-offer h3 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.what-we-do .property-offer p.secondary-text {
+    color: var(--secondary_color);
+    font-weight: 600;
+}
+
+.what-we-do .property-offer h4 {
+    color: var(--secondary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .property-offer ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .property-offer li::marker {
+    color: var(--secondary_color);
+}
+
+.what-we-do .property-offer li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .pre-tenancy {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.what-we-do .pre-tenancy .section-number {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background-color: var(--primary_color);
+}
+
+.what-we-do .pre-tenancy h3 {
+    font-weight: 700;
+}
+
+.what-we-do .pre-tenancy h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .pre-tenancy p.bold {
+    font-weight: 600;
+}
+
+.what-we-do .pre-tenancy ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .pre-tenancy li::marker {
+    color: var(--primary_color);
+}
+
+.what-we-do .pre-tenancy li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .management-services h6 {
+    color: var(--secondary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .management-services p.secondary-color-bold {
+    color: var(--secondary_color);
+    font-weight: 600;
+}
+
+.what-we-do .management-services .section-number {
+    position: absolute;
+    top: 0;
+    left: -48px;
+    background-color: var(--primary_color);
+}
+
+.what-we-do .management-services h3 {
+    color: var(--primary_color);
+    font-weight: 700;
+}
+
+.what-we-do .management-services p.primary-text {
+    color: var(--primary_color);
+    font-weight: 600;
+}
+
+.what-we-do .management-services h4 {
+    color: var(--primary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.what-we-do .management-services ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.what-we-do .management-services li::marker {
+    color: var(--primary_color);
+}
+
+.what-we-do .management-services li p {
+    font-weight: 400;
+    display: inline;
+}
+
+.what-we-do .legal {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.what-we-do .legal .section-number {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background-color: var(--secondary_color);
+}
+
+.what-we-do .legal h3 {
+    font-weight: 700;
+}
+
+.what-we-do .legal p {
+    font-weight: 600;
+}
+/* What we do css end */
+
+.full-management-hero {
+    border-bottom: 48px solid var(--secondary_color);
+}
+
+.full-management-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.full-management-hero .secondary-text-bold {
+    color: var(--secondary_color);
+    font-weight: 600;
+    font-size: var(--lg);
+}
+
+.packages table thead th:first-child {
+    --lg: 32px;
+    
+    width: 40%;
+    color: var(--secondary_color);
+    font-size: var(--lg);
+    text-transform: uppercase;
+}
+
+.packages table thead th:nth-child(2),
+.packages table thead th:nth-child(3),
+.packages table thead th:nth-child(4) {
+    width: 20%;
+    text-align: center;
+    color: var(--white_color);
+    padding: 12px 16px;
+    border-left: 8px solid var(--white_color);
+    border-right: 8px solid var(--white_color);
+    border-bottom: 8px solid var(--white_color);
+}
+
+.packages table thead th:nth-child(2) {
+    background-color: var(--secondary_color);
+}
+
+.packages table thead th:nth-child(3) {
+    background-color: var(--primary_color);
+}
+
+.packages table thead th:nth-child(4) {
+    background-color: var(--gray_color);
+}
+
+.packages table tbody tr {
+    border-bottom: 1px solid #c5c6c8;
+}
+
+.packages table tbody td:first-child {
+    font-weight: 700;
+}
+
+.packages table tbody td:nth-child(2),
+.packages table tbody td:nth-child(3),
+.packages table tbody td:nth-child(4) {
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #e7e8e9;
+    border-left: 8px solid var(--white_color);
+    border-right: 8px solid var(--white_color);
+}
+
+.packages table tbody td:nth-child(2).filled {
+    color: var(--secondary_color);
+}
+
+.packages table tbody td:nth-child(3).filled {
+    color: var(--primary_color);
+}
+
+.packages table tbody td:nth-child(4).filled {
+    color: var(--gray_color);
+}
+
+.packages table tfoot td:nth-child(2),
+.packages table tfoot td:nth-child(3),
+.packages table tfoot td:nth-child(4) {
+    padding: 12px 0;
+    text-align: center;
+    background-color: #e7e8e9;
+    border-left: 8px solid var(--white_color);
+    border-right: 8px solid var(--white_color);
+}
+
+
+.packages table tfoot td:nth-child(2) a,
+.packages table tfoot td:nth-child(3) a,
+.packages table tfoot td:nth-child(4) a {
+    padding: 8px 24px;
+    color: var(--white_color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.packages table tfoot td:nth-child(2) a:hover,
+.packages table tfoot td:nth-child(3) a:hover,
+.packages table tfoot td:nth-child(4) a:hover {
+    opacity: .8;
+}
+
+.packages table tfoot td:nth-child(2) a {
+    background-color: var(--secondary_color);
+}
+
+.packages table tfoot td:nth-child(3) a {
+    background-color: var(--primary_color);
+}
+
+.packages table tfoot td:nth-child(4) a {
+    background-color: var(--gray_color);
+}
+
+.fee-cal {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.fee-cal h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.fee-cal h4 {
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.fee-cal input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: var(--white_color);
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.fee-cal input::placeholder {
+    text-transform: uppercase;
+}
+
+.fee-cal button {
+    border: none;
+    padding: 8px 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.fee-cal button:hover {
+    opacity: .8;
+}
+
+.book-valuation h3 {
+    color: var(--secondary_color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.book-valuation p {
+    font-weight: 600;
+    color: var(--secondary_color);
+    font-size: var(--lg);
+}
+
+.book-valuation .left {
+    width: 80%;
+}
+
+.book-valuation input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #e7e8e9;
+    font-size: var(--sm);
+    font-weight: 600;
+}
+
+.book-valuation input::placeholder {
+    text-transform: uppercase;
+}
+
+.book-valuation .right {
+    width: 20%;
+}
+
+.book-valuation button {
+    width: 100%;
+    border: none;
+    padding: 4px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.book-valuation button:hover {
+    opacity: .8;
+}
+/* Full management css end */
+
+.about-hero h1 {
+    color: var(--secondary_color);
+    font-weight: 700;
+}
+
+.about-hero .secondary-text-bold {
+    font-weight: 600;
+    font-size: var(--lg);
+    color: var(--secondary_color);
+}
+
+.meet-the-team .heading {
+    color: var(--white_color);
+    background-color: var(--secondary_color);
+}
+
+.meet-the-team .heading .bold {
+    font-weight: 600;
+    font-size: var(--lg);
+}
+
+.meet-the-team .heading h3 {
+    font-weight: 700;
+}
+
+.member-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.member-card-grid .grid-item h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary_color);
+}
+
+.member-card-grid .grid-item .designation {
+    text-transform: capitalize;
+}
+
+.member-card-grid .grid-item ul a {
+    color: var(--secondary_color);
+    font-size: 22px;
+}
+
+.member-card-grid .grid-item ul a:hover {
+    opacity: .8;
+}
+
+.member-card-grid .grid-item ul li:last-child a {
+    font-size: 24px;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+.about-service {
+    color: var(--white_color);
+    background-color: var(--primary_color);
+}
+
+.about-service h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/* About css end */
