@@ -14,6 +14,18 @@ $(function () {
         });
     }
     shrinkNav();
+
+    // Toggle menu
+    function resToggleMenu() {
+        $('.main-header .toggle-items').hide();
+
+        $('.main-header .toggle-controller').on('click', function () {
+            $('.main-header .toggle-items').toggle(500);
+
+            $(this).toggleClass('active');
+        });
+    }
+    resToggleMenu();
     
     // Back to top
     function btt() {

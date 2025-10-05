@@ -399,6 +399,68 @@ body {
     text-decoration: underline;
     opacity: .9;
 }
+
+.main-header .toggle-controller {
+    background-color: transparent;
+    border: none;
+}
+
+.main-header .toggle-controller i {
+    color: var(--primary_color);
+    font-size: 20px;
+}
+
+.main-header .toggle-controller span {
+    color: var(--gray_color);
+    font-weight: 600;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .toggle-controller:hover span,
+.main-header .toggle-controller.active span {
+    color: var(--primary_color);
+}
+
+.main-header .responsive-toggle-items {
+    position: absolute;
+    bottom: -72px;
+    left: 0;
+    width: 100%;
+    background-color: #e7e8e9;
+    box-shadow: .5px .5px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main-header .responsive-toggle-items ul a {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.main-header .responsive-toggle-items ul a i {
+    color: var(--primary_color);
+    font-size: 20px;
+}
+
+.main-header .responsive-toggle-items ul a span {
+    color: var(--gray_color);
+    font-weight: 600;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header .responsive-toggle-items ul a:hover span {
+    color: var(--primary_color);
+}
+
+.main-header .toggle-items {
+    padding: 4px 0;
+}
 /* Header css end */
 
 .home-hero h1 {

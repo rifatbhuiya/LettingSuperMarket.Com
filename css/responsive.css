@@ -77,7 +77,7 @@
     }
 
     .main-header .main-nav::after {
-        width: 40%;
+        width: 35%;
     }
 
     .main-header.fixed-header .nav-logo {
@@ -98,6 +98,11 @@
 
     .member-card-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-header .contact-action {
+        padding: 24px 16px;
+        font-size: var(--sm);
     }
 }
 
@@ -243,8 +248,12 @@
         --sm: 13px;
     }
 
+    .main-header .main-nav {
+        padding: 8px 0;
+    }
+
     .main-header .main-nav::after {
-        width: 30%;
+        width: 16%;
     }
 
     .main-header.fixed-header .nav-logo {
@@ -283,5 +292,19 @@
         width: 32px;
         line-height: 32px;
         left: 4px !important;
+    }
+
+    .main-header .responsive-toggle-items {
+        bottom: -70px;
+    }
+}
+
+@media (max-width: 431.98px) {
+    .main-header .main-nav::after {
+        width: 20%;
+    }
+
+    .main-header .responsive-toggle-items {
+        bottom: -92px;
     }
 }
